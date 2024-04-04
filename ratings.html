@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:with="version='@project.version@'">
+  <meta charset="UTF-8">
+  <title th:text="#{signIn} + ' - Retro Game'">M-WARFARE | HOME</title>
+  <link
+      th:href="@{/static/skins/{skin}/style.css?{v}(skin=${@environment.getProperty('retro-game.default-skin')},v=${version})}"
+      rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="https://discord.gg/glassow">Discord</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+		<ul>
+			<li><a href="https://game.mwarfare.com/">Login</a></li>
+			<li><a href="https://game.mwarfare.com/join">Sign Up</a></li>
+		</ul>
+	</nav>
+  <div>
+    <h2 class="p-heading"> Player Ratings </h3>
+  </div>
+  <div class="pr-body">
+  <table>
+    <tr>
+      <th class="table-heading">Rank</th>
+      <th class="t-item-player-name">Player Name</th>
+      <th class="table-heading">S1 Rating</th>
+      <th class="table-heading">Cumulative Rating</th>
+    </tr>
+    <tr class="t-item">
+      <td class="t-item-rank">1</td>
+      <td class="t-item-player-name">Gunslinger</td>
+      <td class="t-item-score">96.7</td>
+      <td class="t-item-score">96.7</td>
+    </tr>
+    <tr class="t-item">
+      <td class="t-item-rank"> 2</td>
+      <td class="t-item-player-name">CuZZeR</td>
+      <td class="t-item-score">60.7</td>
+      <td class="t-item-score">60.7</td>
+    </tr>
+    <tr class="t-item">
+      <td class="t-item-rank"> 3</td>
+      <td class="t-item-player-name">Stilgar</td>
+      <td class="t-item-score">38.7</td>
+      <td class="t-item-score">38.7</td>
+    </tr>
+    <tr class="t-item">
+      <td class="t-item-rank"> 4</td>
+      <td class="t-item-player-name">Squidbolt</td>
+      <td class="t-item-score">1</td>
+      <td class="t-item-score">1</td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
